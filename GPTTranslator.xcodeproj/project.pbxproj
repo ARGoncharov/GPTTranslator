@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AA4826029CC8B950029657F /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA4825F29CC8B950029657F /* OpenAISwift */; };
 		8AB4EFFC29C88C6E00021E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4EFFB29C88C6E00021E12 /* AppDelegate.swift */; };
 		8AB4EFFE29C88C6E00021E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4EFFD29C88C6E00021E12 /* SceneDelegate.swift */; };
 		8AB4F00029C88C6E00021E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4EFFF29C88C6E00021E12 /* ViewController.swift */; };
-		8AB4F00329C88C6E00021E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4F00129C88C6E00021E12 /* Main.storyboard */; };
 		8AB4F00529C88C6F00021E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4F00429C88C6F00021E12 /* Assets.xcassets */; };
 		8AB4F00829C88C6F00021E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB4F00629C88C6F00021E12 /* LaunchScreen.storyboard */; };
+		8AB4F01129C88D0600021E12 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8AB4F01029C88D0600021E12 /* SnapKit */; };
+		8AB4F01729C88D7300021E12 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4F01629C88D7300021E12 /* MainViewModel.swift */; };
+		8AB4F01C29C88E3700021E12 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4F01B29C88E3700021E12 /* Extension.swift */; };
+		8AB4F02029C89EC100021E12 /* ChatGPTAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4F01F29C89EC100021E12 /* ChatGPTAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,12 @@
 		8AB4EFFB29C88C6E00021E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB4EFFD29C88C6E00021E12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AB4EFFF29C88C6E00021E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8AB4F00229C88C6E00021E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AB4F00429C88C6F00021E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AB4F00729C88C6F00021E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB4F00929C88C6F00021E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB4F01629C88D7300021E12 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8AB4F01B29C88E3700021E12 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8AB4F01F29C89EC100021E12 /* ChatGPTAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA4826029CC8B950029657F /* OpenAISwift in Frameworks */,
+				8AB4F01129C88D0600021E12 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,57 @@
 		8AB4EFFA29C88C6E00021E12 /* GPTTranslator */ = {
 			isa = PBXGroup;
 			children = (
-				8AB4EFFB29C88C6E00021E12 /* AppDelegate.swift */,
-				8AB4EFFD29C88C6E00021E12 /* SceneDelegate.swift */,
-				8AB4EFFF29C88C6E00021E12 /* ViewController.swift */,
-				8AB4F00129C88C6E00021E12 /* Main.storyboard */,
-				8AB4F00429C88C6F00021E12 /* Assets.xcassets */,
-				8AB4F00629C88C6F00021E12 /* LaunchScreen.storyboard */,
+				8AB4F01D29C8914700021E12 /* Managers */,
+				8AB4F01A29C88E2700021E12 /* Extensions */,
+				8AB4F01529C88D6400021E12 /* ViewModels */,
+				8AB4F01829C88D8600021E12 /* Resources */,
+				8AB4F01929C88D9400021E12 /* Views */,
 				8AB4F00929C88C6F00021E12 /* Info.plist */,
 			);
 			path = GPTTranslator;
+			sourceTree = "<group>";
+		};
+		8AB4F01529C88D6400021E12 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4F01629C88D7300021E12 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8AB4F01829C88D8600021E12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4EFFB29C88C6E00021E12 /* AppDelegate.swift */,
+				8AB4EFFD29C88C6E00021E12 /* SceneDelegate.swift */,
+				8AB4F00429C88C6F00021E12 /* Assets.xcassets */,
+				8AB4F00629C88C6F00021E12 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8AB4F01929C88D9400021E12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4EFFF29C88C6E00021E12 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8AB4F01A29C88E2700021E12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4F01B29C88E3700021E12 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AB4F01D29C8914700021E12 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4F01F29C89EC100021E12 /* ChatGPTAPIService.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,10 @@
 			dependencies = (
 			);
 			name = GPTTranslator;
+			packageProductDependencies = (
+				8AB4F01029C88D0600021E12 /* SnapKit */,
+				8AA4825F29CC8B950029657F /* OpenAISwift */,
+			);
 			productName = GPTTranslator;
 			productReference = 8AB4EFF829C88C6E00021E12 /* GPTTranslator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +165,10 @@
 				Base,
 			);
 			mainGroup = 8AB4EFEF29C88C6E00021E12;
+			packageReferences = (
+				8AB4F00F29C88D0600021E12 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8AA4825E29CC8B950029657F /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 8AB4EFF929C88C6E00021E12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +185,6 @@
 			files = (
 				8AB4F00829C88C6F00021E12 /* LaunchScreen.storyboard in Resources */,
 				8AB4F00529C88C6F00021E12 /* Assets.xcassets in Resources */,
-				8AB4F00329C88C6E00021E12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB4F01729C88D7300021E12 /* MainViewModel.swift in Sources */,
 				8AB4F00029C88C6E00021E12 /* ViewController.swift in Sources */,
+				8AB4F01C29C88E3700021E12 /* Extension.swift in Sources */,
 				8AB4EFFC29C88C6E00021E12 /* AppDelegate.swift in Sources */,
+				8AB4F02029C89EC100021E12 /* ChatGPTAPIService.swift in Sources */,
 				8AB4EFFE29C88C6E00021E12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8AB4F00129C88C6E00021E12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AB4F00229C88C6E00021E12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8AB4F00629C88C6F00021E12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +343,6 @@
 				INFOPLIST_FILE = GPTTranslator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +369,6 @@
 				INFOPLIST_FILE = GPTTranslator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +406,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AA4825E29CC8B950029657F /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8AB4F00F29C88D0600021E12 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AA4825F29CC8B950029657F /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AA4825E29CC8B950029657F /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		8AB4F01029C88D0600021E12 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AB4F00F29C88D0600021E12 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AB4EFF029C88C6E00021E12 /* Project object */;
 }
